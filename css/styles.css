@@ -132,7 +132,13 @@ body {
 
 .header-list, .list {}
 
-.header-list-item {}
+.header-list-item {
+    margin-right: 50px;
+}
+
+.header-list-item:last-child {
+    margin-right: 0;
+}
 
 .header-link {
     width: 122px;
@@ -145,10 +151,7 @@ body {
     color: var(--main-txt-cl);
 }
 
-.header-link:not(last-child) {
-    margin-right: 50px;
-}
-        
+     
 .header-link:hover,
 .header-link:focus {
     color: var(--accent-txt-cl);
@@ -237,6 +240,7 @@ body {
     padding-bottom: 94px;
 }
 
+/* benefits-set start */
 .benefits-set {
     margin: 0;
     display: flex;
@@ -250,6 +254,7 @@ body {
     margin-left: var(--benefits-gap);
     margin-top: var(--benefits-gap);
 }
+/* benefits-set end */
 
 .benefits-list-item-title {
     font-weight: 700;
@@ -300,20 +305,19 @@ body {
     margin-bottom: 50px;
 }
 
+/* team-set start */
 .team-set {
     padding: 0;
     margin: 0;
     display: flex;
     flex-wrap: wrap;
-    margin-left: calc(-1 * var(--team-gap));
-    margin-top: calc(-1 * var(--team-gap));
+   gap: var(--team-gap);
 }
 
 .team-set-item {
-    flex-basis: calc(100% / var(--team-items) - var(--team-gap));
-    margin-left: var(--team-gap);
-    margin-top: var(--team-gap);
+    flex-basis: calc(100% / var(--team-gap) * 3) / var(--team-items));
 }
+/* team-set end */
 
 .team-list-item {
     padding-bottom: 30px;
@@ -360,6 +364,14 @@ body {
 
 .portfolio-filter-list, .list {} 
 
+.portfolio-filter-list-item {
+    margin-right: 8px;
+}
+
+.portfolio-filter-list-item:last-child {
+    margin-right: 0;
+}
+
 .portfolio-filter-btn {
     font-weight: 500;
     font-size: 16px;
@@ -373,32 +385,25 @@ body {
     padding: 6px 22px;
 }
 
-.portfolio-filter-btn:not(last-child) {
-    margin-right: 8px;
-}
-
 .portfolio-filter-btn:hover,
 .portfolio-filter-btn:focus {
     color: var(--secondary-accent-txt-cl);
     background-color: var(--accent-bg-cl);
 }
 
-/* portfolio-list set */
+/* portfolio-list-set start */
 .card-set {
     padding: 0;
     margin: 0;
     display: flex;
     flex-wrap: wrap;
-    margin-left: calc(-1 * var(--portfolio-gap));
-    margin-top: calc(-1 * var(--portfolio-gap));
-    
+    gap: var(--portfolio-gap);
 }
 
 .card-set-item {
-    flex-basis: calc(100% / var(--portfolio-items) - var(--portfolio-gap));
-    margin-left: var(--portfolio-gap);
-    margin-top: var(--portfolio-gap);
+    flex-basis: calc((100% - var(--portfolio-gap) * 2) / var(--portfolio-items));
 }
+/* portfolio-list-set end */
 
 .portfolio-list-item {
     display: flex;
